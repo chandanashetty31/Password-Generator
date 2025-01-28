@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+    <form action="/" method="post">
+        <p>Enter length:<input type="number" name="length" min="1" required value="<%= length || '' %>"></p>
+        <button type="submit">Send</button>
+    </form>
+    
+    
+    <% if (locals.length) { %>
+    <% if (locals.data) { %>
+        <h3>Generated Password:</h3>
+        <p id="Generated"><%= data.random_password %></p>
+      <% } else if (locals.error) { %>
+        <p><%= error %></p>
+      <% } %>
+      <% } %>
+    </div>
+    
+</body>
+<script>
+   
+  </script>
+</html>
